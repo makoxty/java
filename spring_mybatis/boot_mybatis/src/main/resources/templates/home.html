@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" xmlns:sec="http://www.thymeleaf.org/extras/spring-security">
+
+<head>
+	<meta charset="utf-8">
+	<title>ホーム画面画面</title>
+	<link th:href="@{/css/bootstrap.min.css}" rel="stylesheet">
+	<script th:src="@{/js/bootstrap.min.js}"></script>
+</head>
+
+<body>
+	　　 <div class="container">
+		<form th:action="@{/home/ja}" method="POST" th:object="${form}">
+			<h1>日本語</h1>
+			<div class="mb-3">
+				<label for="exampleFormControlInput1" class="form-label">名前</label>
+				<input type="text" class="form-control" id="name" placeholder="テスト太郎" th:field="*{name}">
+			</div>
+			<div class="mb-3">
+				<label for="exampleFormControlInput1" class="form-label">電話番号</label>
+				<input type="text" class="form-control" id="tellNumber" placeholder="0x0xxxxxxxx"
+					th:field="*{tellNumber}">
+			</div>
+			<div class="mb-3">
+				<label for="exampleFormControlInput1" class="form-label">年齢</label>
+				<input type="number" class="form-control" id="age" th:field="*{age}">
+			</div>
+			<select class="form-select" aria-label="Default select example" th:field="*{sex}">
+				<option value="1">男</option>
+				<option value="2">女</option>
+			</select>
+			<div class="btn-row pt-3 text-center">
+				<button type="submit" name="regist" class="btn btn-outline-primary">登録</button>
+			</div>
+		</form>
+		<h1 class="pt-3">English</h1>
+		<form th:action="@{/home/en}" method="POST" th:object="${form}">
+			<div class="mb-3">
+				<label for="exampleFormControlInput1" class="form-label">Name</label>
+				<input type="text" class="form-control" id="name" placeholder="taro" th:field="*{name}">
+			</div>
+			<div class="mb-3">
+				<label for="exampleFormControlInput1" class="form-label">Phone</label>
+				<input type="text" class="form-control" id="tellNumber" placeholder="0x0xxxxxxxx"
+					th:field="*{tellNumber}">
+			</div>
+			<div class="mb-3">
+				<label for="exampleFormControlInput1" class="form-label">Age</label>
+				<input type="number" class="form-control" id="age" th:field="*{age}">
+			</div>
+			<select class="form-select" aria-label="Default select example" th:field="*{sex}">
+				<option value="1">男</option>
+				<option value="2">女</option>
+			</select>
+			<div class="btn-row pt-3 text-center">
+				<button type="submit" name="regist" class="btn btn-outline-primary">登録</button>
+			</div>
+		</form>
+	</div>
+</body>
+
+</html>
