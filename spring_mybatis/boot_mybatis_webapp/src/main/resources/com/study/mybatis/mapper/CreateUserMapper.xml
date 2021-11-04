@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.study.mybatis.mapper.CreateUserMapper">
+
+	<insert id="insertUser"
+		parameterType="com.study.mybatis.entity.Login" useGeneratedKeys="true"
+		keyProperty="client_id">
+		insert into Login (
+		login_id,
+		password,
+		name,
+		tell_number,
+		sex,
+		age
+		)
+		values
+		(
+		#{client_id},
+		#{password},
+		#{name},
+		#{tell_number},
+		#{sex},
+		#{age}
+		)
+	</insert>
+
+</mapper>

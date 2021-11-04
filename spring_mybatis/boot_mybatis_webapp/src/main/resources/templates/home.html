@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" xmlns:sec="http://www.thymeleaf.org/extras/spring-security">
+
+<head>
+	<meta charset="utf-8">
+	<title>ホーム画面</title>
+	<link th:href="@{/css/bootstrap.min.css}" rel="stylesheet">
+	<script th:src="@{/js/bootstrap.min.js}"></script>
+</head>
+
+<body>
+	<div class="container pt-5">
+		<form th:action="@{/login}" method="POST" th:object="${form}">
+			<div class="card">
+				<div class="card-header text-center bg-dark text-white">
+					ホーム
+				</div>
+				<div class="card-body bg-info">
+					<div class="mb-3">
+						<label class="form-label">ログインに成功しました</label>
+					</div>
+				</div>
+			</div>
+		</form>
+	</div>
+</body>
+
+</html>

@@ -6,6 +6,7 @@
 		parameterType="com.study.mybatis.entity.Home" useGeneratedKeys="true"
 		keyProperty="id">
 		insert into CLIENT (
+		clientId,
 		name,
 		tellNumber,
 		sex,
@@ -13,6 +14,7 @@
 		)
 		values
 		(
+		#{clientId},
 		#{name},
 		#{tellNumber},
 		#{sex},

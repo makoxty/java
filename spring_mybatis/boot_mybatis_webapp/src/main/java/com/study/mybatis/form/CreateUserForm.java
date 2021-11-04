@@ -5,16 +5,19 @@ import java.io.Serializable;
 import lombok.Data;
 
 @Data
-public class HomeForm implements Serializable {
+public class CreateUserForm implements Serializable {
+	
 	private static final long serialVersionUID = 1L;
-
+	
 	private int id;
 	
-	private int clientId;
+	private int client_id;
+	
+	private String password;
 	
 	private String name;
 	
-	private String tellNumber;
+	private String tell_number;
 	
 	private String sex;
 	

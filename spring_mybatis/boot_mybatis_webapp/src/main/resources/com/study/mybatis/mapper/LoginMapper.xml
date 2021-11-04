@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.study.mybatis.mapper.LoginMapper">
+
+    	<select id="getSelectMember"
+		resultType="com.study.mybatis.entity.Login">
+		SELECT name, tell_number, sex, age
+		FROM Login
+		where login_id = #{login_id} 
+		and password = #{password}
+	</select>
+</mapper>
